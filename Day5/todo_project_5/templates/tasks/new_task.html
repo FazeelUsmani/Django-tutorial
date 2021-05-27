@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add the task</title>
+</head>
+<body>
+    <!-- <form action="www.facebook.com/create_message" method="POST"> -->
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Create new task</h1>
+        Content: <textarea name="content"></textarea> <br>
+        Deadline: <input type="datetime-local" name="deadline"/> <br>
+        <input type="submit" name="submit" value="Add task!">
+
+    </form>
+
+
+</body>
+</html>
