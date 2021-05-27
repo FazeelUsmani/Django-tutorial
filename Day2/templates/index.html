@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block page_body %}
+Hello, this is index page
+
+<br />
+
+The time right now is {{ curr_date }} <br />
+
+Current tasks we have: {{ tasks }} >br />
+
+<ol>
+{% for task in tasks %}
+    <li>{{ task }}</li>    
+{% endfor %}
+</ol>
+
+{% filter force_escape|lower %}
+    This text will be HTML-escaped, and will appear in all lowercase.
+{% endfilter %}  <br />
+
+{% endblock %}
+
+{% block title %}
+index page
+{% endblock %}
